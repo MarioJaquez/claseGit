@@ -1,14 +1,14 @@
 version: "3.9"  
 services:
   fastapi:
-    image: mariojaquez/clase_devops:myimagefastapiv4
+    image: MarioJaquez/clase_devops:myimagefastapiv4
     build: ./docker_fastapi
     ports:
       - "80:80"
     depends_on:
       - mysql
   mysql:
-    image: mariojaquez/clase_devops_mysql:myimagemysqlv2
+    image: MarioJaquez/clase_devops_mysql:myimagemysqlv2
     build: ./docker_mysql
     restart: always
     command: --default-authentication-plugin=mysql_native_password
